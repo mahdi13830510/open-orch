@@ -1,0 +1,144 @@
+/* ── Brand palette ─────────────────────────────────────────────────── */
+:root {
+  --vp-c-brand-1: #7c3aed;
+  --vp-c-brand-2: #6d28d9;
+  --vp-c-brand-3: #5b21b6;
+  --vp-c-brand-soft: rgba(124, 58, 237, 0.14);
+}
+
+.dark {
+  --vp-c-brand-1: #a78bfa;
+  --vp-c-brand-2: #8b5cf6;
+  --vp-c-brand-3: #7c3aed;
+  --vp-c-brand-soft: rgba(167, 139, 250, 0.12);
+}
+
+/* ── Hero ───────────────────────────────────────────────────────────── */
+.VPHero .name {
+  background: linear-gradient(135deg, #7c3aed 0%, #2563eb 50%, #06b6d4 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.VPHero .text {
+  font-size: clamp(1.4rem, 3vw, 2rem) !important;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.VPHero .tagline {
+  font-size: clamp(1rem, 2vw, 1.2rem) !important;
+  opacity: 0.75;
+  max-width: 560px;
+}
+
+/* Pulsing glow on brand button */
+.VPButton.brand {
+  background: linear-gradient(135deg, #7c3aed, #2563eb);
+  border: none;
+  box-shadow: 0 0 0 0 rgba(124, 58, 237, 0.5);
+  animation: pulse-glow 3s ease-in-out infinite;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.VPButton.brand:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(124, 58, 237, 0.45);
+  animation: none;
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(124, 58, 237, 0.5); }
+  50%       { box-shadow: 0 0 0 12px rgba(124, 58, 237, 0); }
+}
+
+/* ── Features grid ───────────────────────────────────────────────────── */
+.VPFeature {
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 12px;
+  transition: border-color 0.25s, transform 0.25s, box-shadow 0.25s;
+  background: var(--vp-c-bg-soft);
+}
+
+.VPFeature:hover {
+  border-color: var(--vp-c-brand-1);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 36px rgba(124, 58, 237, 0.15);
+}
+
+.VPFeature .icon {
+  font-size: 2rem;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+/* ── Nav ─────────────────────────────────────────────────────────────── */
+.VPNavBar {
+  backdrop-filter: saturate(180%) blur(16px);
+  background: rgba(var(--vp-c-bg-rgb), 0.8) !important;
+}
+
+/* ── Diagram blocks — dark bg so Mermaid SVG pops ───────────────────── */
+.mermaid-wrapper, .vp-mermaid {
+  background: var(--vp-c-bg-soft);
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 10px;
+  padding: 1.5rem;
+  overflow-x: auto;
+  margin: 1.5rem 0;
+}
+
+/* ── Home page extra hero banner ─────────────────────────────────────── */
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  border-radius: 999px;
+  background: var(--vp-c-brand-soft);
+  color: var(--vp-c-brand-1);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  margin-bottom: 1.2rem;
+}
+
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1rem;
+  margin: 2.5rem 0;
+}
+
+.stat-card {
+  text-align: center;
+  padding: 1.25rem;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 10px;
+  background: var(--vp-c-bg-soft);
+  transition: border-color 0.2s;
+}
+
+.stat-card:hover { border-color: var(--vp-c-brand-1); }
+
+.stat-number {
+  font-size: 2rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #7c3aed, #2563eb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1.1;
+}
+
+.stat-label {
+  font-size: 0.78rem;
+  color: var(--vp-c-text-2);
+  margin-top: 0.25rem;
+}
+
+/* ── Code blocks ─────────────────────────────────────────────────────── */
+.vp-code-group .tabs label {
+  font-size: 0.8rem;
+}
