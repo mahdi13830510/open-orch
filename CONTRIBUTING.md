@@ -49,7 +49,7 @@ npm run dev
 ```bash
 cd docs
 npm install
-npm start
+npm run dev
 ```
 
 ## Making changes
