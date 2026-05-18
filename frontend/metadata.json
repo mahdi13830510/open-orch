@@ -1,0 +1,6 @@
+{
+  "name": "Open Orchestra",
+  "description": "An open-source technical dashboard for managing environment lifecycles, service repositories, and deployment events.",
+  "requestFramePermissions": [],
+  "majorCapabilities": []
+}
