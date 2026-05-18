@@ -1,8 +1,3 @@
----
-slug: /
-sidebar_position: 1
----
-
 # Introduction
 
 **Open-Orch** is an open-source control plane for ephemeral preview environments. It automatically provisions isolated Docker environments for every feature branch or pull request, routes traffic through Traefik, and tears them down when they're no longer needed.

@@ -1,14 +1,9 @@
----
-sidebar_position: 1
----
-
 # API Reference
 
 Base URL: `http://localhost:8080` (or `https://api.your-domain.com` in production)
 
 All endpoints accept and return `application/json`. Errors always return `{ "error": "message" }`.
 
----
 
 ## Health
 
@@ -21,7 +16,6 @@ Liveness probe.
 { "status": "ok" }
 ```
 
----
 
 ## Repositories
 
@@ -80,7 +74,6 @@ Add a dependency edge.
 
 Remove a dependency edge.
 
----
 
 ## Environments
 
@@ -136,7 +129,6 @@ Resume a suspended environment. Nudges the reconciler.
 
 **Response `200`** `{ "status": "resumed", "id": "...", "short_id": "..." }`
 
----
 
 ## Deployments
 
@@ -154,7 +146,6 @@ Bump the topology generation and re-deploy all services.
 **Body** `{ "environment_id": "uuid-or-short-id" }`  
 **Response `202`** `{ "status": "restarting" }`
 
----
 
 ## Features
 
@@ -170,7 +161,6 @@ Look up a feature and its associated environment.
 }
 ```
 
----
 
 ## Integrations
 
@@ -216,7 +206,6 @@ Record the result of a client-driven verification check.
 
 **Body** `{ "ok": true, "detail": "optional message" }`
 
----
 
 ## Events
 
@@ -224,7 +213,6 @@ Record the result of a client-driven verification check.
 
 Return the last 100 processed webhook events (descending by `received_at`).
 
----
 
 ## Webhook
 

@@ -1,7 +1,3 @@
----
-sidebar_position: 2
----
-
 # Data Flow
 
 ## GitHub webhook → running environment

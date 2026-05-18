@@ -1,7 +1,3 @@
----
-sidebar_position: 1
----
-
 # Docker Compose Deployment
 
 The canonical production deployment uses `backend/deploy/docker-compose.yml`, which runs:

@@ -1,7 +1,3 @@
----
-sidebar_position: 1
----
-
 # Architecture Overview
 
 Open-Orch is structured as a single stateless binary backed by PostgreSQL and Redis. It can run multiple instances — the reconciler and event processor coordinate via row-level locks and Redis leases.

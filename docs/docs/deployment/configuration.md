@@ -1,7 +1,3 @@
----
-sidebar_position: 2
----
-
 # Configuration Reference
 
 All configuration is supplied via environment variables. The binary reads them at startup — no config file.
